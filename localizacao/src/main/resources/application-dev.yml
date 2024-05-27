@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: apiRESTFull - Cidades
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dblocalizacao
+    username: root
+    password: Sep1914*
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+      format_sql: true
+
+
