@@ -7,4 +7,5 @@ public interface CidadeService {
     List<Cidade> buscarCidadePorNome(String nome);
     List<Cidade> buscarCidadePorHabitantes(Long habitante);
     List<Cidade> buscarLikeInicio(Character character);
+    List<Cidade> buscarLikeFim(Character letra);
 }
