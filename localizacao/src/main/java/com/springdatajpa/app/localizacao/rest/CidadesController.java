@@ -29,8 +29,8 @@ public class CidadesController {
     }
 
     @GetMapping("/inicio/{letra}")
-    public ResponseEntity<List<CidadeDTO>> buscarCidadePelaPrimeiraLetra(@PathVariable Character letra){
-        List<Cidade> listaCidadesEntidade = cidadeService.buscarLikeInicio(letra);
+    public ResponseEntity<List<CidadeDTO>> buscarCidadePelaPrimeiraLetra(@PathVariable String nome){
+        List<Cidade> listaCidadesEntidade = cidadeService.buscarNomeInicio(nome);
         List<CidadeDTO> listaCidadesDTOs = listaCidadesEntidade.stream()
                 .map(cidades -> new CidadeDTO(cidades)).collect(Collectors.toList());
 
@@ -38,8 +38,8 @@ public class CidadesController {
     }
 
     @GetMapping("/fim/{letra}")
-    public ResponseEntity<List<CidadeDTO>> buscarCidadePelaUltimaLetra(@PathVariable Character letra){
-        List<Cidade> listaCidadesEntidade = cidadeService.buscarLikeFim(letra);
+    public ResponseEntity<List<CidadeDTO>> buscarCidadePelaUltimaLetra(@PathVariable String nome){
+        List<Cidade> listaCidadesEntidade = cidadeService.buscarNomeFim(nome);
         List<CidadeDTO> listaCidadesDTOs = listaCidadesEntidade.stream()
                 .map(cidades -> new CidadeDTO(cidades)).collect(Collectors.toList());
 
